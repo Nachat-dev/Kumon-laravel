@@ -21,4 +21,4 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('auth','Login@test');
+Route::get('auth','App\Http\Controllers\Login@test');
