@@ -33,13 +33,13 @@ class Login extends Controller
 
 	public function auth(Request $request)
 	{
-
+		$input = $request->all();
 		$session = session();
 		$model = new UserModel();
 		$userlog  = $model::Where('user', $request->identity)->first();
 		//$data = $model->where(['user'],$this->request->getVar('user'))->first();
 		//print_r($result);
-		if($userlog == 'user'){
+		if($userlog == $input['user']){
 			echo "yes";
 			/*if($data['password'] == $this->request->getVar('password')){
 				$sesion_data = [
