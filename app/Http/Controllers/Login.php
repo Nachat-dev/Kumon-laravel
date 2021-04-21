@@ -33,15 +33,16 @@ class Login extends Controller
 
 	public function auth(Request $request)
 	{
-		$input = $request->all();
+		$user = $request('user');
+		$password = $request('password');
 		$session = session();
 		$model = new UserModel();
 		//$data  = $model::Where('user', $request->identity)->first();
-		$data = $model->where('user',$this->request->$input('user'))->first();
+		$data = $model->where('user',$this->request->$user)->first();
 		//print_r($result);
 		if($data){
 			//echo "yes";
-			if($data['password'] == $this->request->$input('password')){
+			if($data['password'] == $this->request->$password){
 				$sesion_data = [
 					'centreTH'=>$data['centreTH'],
 					'centreEN'=>$data['centreEN'],
