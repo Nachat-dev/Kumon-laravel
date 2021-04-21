@@ -43,7 +43,7 @@
             <center>
 
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                <img src="/logokumon.svg" alt="Image" />
+                <img src="/assets/logokumon.png" alt="Image" />
                 <hr class="login-hr" />
                 <h4 class="form-signin-heading">Advanced Student Forum</h4>
                 <br />
