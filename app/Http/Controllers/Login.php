@@ -33,8 +33,8 @@ class Login extends Controller
 
 	public function auth(Request $request)
 	{
-		$user = $request('user');
-		$password = $request('password');
+		$user = $request->input('user');
+		$password = $request->input('password');
 		$session = session();
 		$model = new UserModel();
 		//$data  = $model::Where('user', $request->identity)->first();
