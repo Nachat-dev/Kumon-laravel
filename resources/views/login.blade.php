@@ -51,7 +51,7 @@
                 <p class="txt-red">ท่านผู้ปกครองจะต้องยืนยันข้อมูลในแบบฟอร์มนี้ กรณีที่บุตร-หลาน ของท่านอายุไม่ถึง 20 ปีบริบูรณ์ <span class="englishversion" onclick="document.getElementById('enpopup').style.display='block'">English Version</span></p>
                 
                     <label style="float: left;"><i class="fas fa-user" style="color: lightskyblue; margin-bottom:10px; margin-left:10px;"></i>&nbsp;ชื่อผู้ใช้ / Username</label>
-                    <input type="text" class="form-control" id="user" name="user" placeholder="Username" required="" value="user">
+                    <input type="text" class="form-control" id="user" name="user" placeholder="Username" required="" value="{{user}}">
                     <br />
                     <label style="float: left;"><i class="fas fa-key" style="color: lightskyblue; margin-bottom:10px; margin-left:10px;"></i>&nbsp;รหัสผ่าน / Password</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="">
