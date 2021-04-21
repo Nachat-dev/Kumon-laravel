@@ -27,13 +27,16 @@ class Login extends Controller
 		echo view('login');
 	}
 
-	public function auth()
+	public function auth(Request $request)
 	{
 
 		$session = session();
 		$model = new UserModel();
-		$data = $model->where('user',$this->request->getVar('user'))->first();
-		
+		$data = $model->where(['user'],$this->request->getVar('user'))->first();
+		//$data = array(
+		//	'user' => $request->get('user'),
+		//	'password' => $request->get('password')
+		//);
 		//print_r($result);
 		if($data){
 			if($data['password'] == $this->request->getVar('password')){
