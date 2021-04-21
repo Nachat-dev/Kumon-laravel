@@ -22,3 +22,4 @@ Route::get('/login', function () {
 });
 
 Route::get('auth','App\Http\Controllers\Login@test');
+Route::get('login/auth','App\Http\Controllers\Login@auth');
