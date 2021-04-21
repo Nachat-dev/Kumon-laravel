@@ -48,9 +48,7 @@
                 <br />
                 <h4 class="form-signin-heading">เข้าสู่ระบบสมาชิก / Log in</h4><br />
                 <p class="txt-red">ท่านผู้ปกครองจะต้องยืนยันข้อมูลในแบบฟอร์มนี้ กรณีที่บุตร-หลาน ของท่านอายุไม่ถึง 20 ปีบริบูรณ์ <span class="englishversion" onclick="document.getElementById('enpopup').style.display='block'">English Version</span></p>
-                <?php if (session()->getFlashdata('msg')) : ?>
-                    <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?>
-                    <?php endif; ?>
+              
                     <label style="float: left;"><i class="fas fa-user" style="color: lightskyblue; margin-bottom:10px; margin-left:10px;"></i>&nbsp;ชื่อผู้ใช้ / Username</label>
                     <input type="text" class="form-control" id="user" name="user" placeholder="Username" required="" value="">
                     <br />
