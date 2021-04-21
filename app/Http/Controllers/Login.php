@@ -35,15 +35,11 @@ class Login extends Controller
 	{
 
 		$session = session();
-		//$model = new UserModel();
-
+		$model = new UserModel();
+		$userlog  = $model::Where('user', $request->identity)->first();
 		//$data = $model->where(['user'],$this->request->getVar('user'))->first();
-		$data = array(
-			'user' => $request->get('user'),
-			'password' => $request->get('password')
-		);
 		//print_r($result);
-		if($data){
+		if($userlog == 'user'){
 			echo "yes";
 			/*if($data['password'] == $this->request->getVar('password')){
 				$sesion_data = [
