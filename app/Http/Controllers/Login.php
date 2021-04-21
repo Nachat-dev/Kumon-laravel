@@ -17,7 +17,7 @@ class Login extends Controller
 
 
 	public function test(){
-		echo "Fuckkk";
+		return UserModel::all();
 
 	}
 
