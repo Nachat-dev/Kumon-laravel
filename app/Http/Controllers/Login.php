@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Controllers\BaseController;
 use App\Models\UserModel;
+use Illuminate\Support\Facades\DB;
+
 
 
 
@@ -17,7 +19,9 @@ class Login extends Controller
 
 
 	public function test(){
-		return UserModel::all();
+		//$model = new UserModel();
+		$users = DB::select('select * from studentdata where user');
+		return $users;
 
 	}
 
@@ -32,6 +36,7 @@ class Login extends Controller
 
 		$session = session();
 		//$model = new UserModel();
+
 		//$data = $model->where(['user'],$this->request->getVar('user'))->first();
 		$data = array(
 			'user' => $request->get('user'),
