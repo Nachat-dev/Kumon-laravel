@@ -31,15 +31,16 @@ class Login extends Controller
 	{
 
 		$session = session();
-		$model = new UserModel();
-		$data = $model->where(['user'],$this->request->getVar('user'))->first();
-		//$data = array(
-		//	'user' => $request->get('user'),
-		//	'password' => $request->get('password')
-		//);
+		//$model = new UserModel();
+		//$data = $model->where(['user'],$this->request->getVar('user'))->first();
+		$data = array(
+			'user' => $request->get('user'),
+			'password' => $request->get('password')
+		);
 		//print_r($result);
 		if($data){
-			if($data['password'] == $this->request->getVar('password')){
+			echo "yes";
+			/*if($data['password'] == $this->request->getVar('password')){
 				$sesion_data = [
 					'centreTH'=>$data['centreTH'],
 					'centreEN'=>$data['centreEN'],
@@ -62,10 +63,11 @@ class Login extends Controller
 			}else{
 			$session->setFlashdata('msg', "Wrong Password");
 				return redirect()->to('/login');
-			}
+			}*/
 		}else {
-			$session->setFlashdata('msg', "User not found");
-			return redirect()->to('/login');
+			echo "no";
+			//$session->setFlashdata('msg', "User not found");
+			//return redirect()->to('/login');
 		}
 	/*
 		$session = session();
